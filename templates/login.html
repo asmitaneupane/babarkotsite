@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block title %}
+  <title>
+    LogIn | Gov. Secondary School Babarkot
+  </title>
+{% endblock title %}
+  
+{% block content %}
+<div class="container">
+  <div class="container cal bg-white pt-5 pe-5 ps-5 pb-2 mt-5 shadow" style="border-radius: 20px;">
+  <div class="text-center">
+    <img class="pb-3" src="{% static 'img/helo.png' %}" style="width: 100px;" alt="logo">
+    <h2 class="mt-1 pb-1 mb-3"><b>Welcome</b></h2>
+    {% include 'messages.html' %}
+    <h4 class="mb-3"><b>Please Login To Your Acoount</b></h4>
+  </div>
+
+  <form method="post">  
+    {% csrf_token %}
+    <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="floatingInputValue" name="username" placeholder="username">
+            <label for="floatingInputValue">Username</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="password" class="form-control" id="floatingInputValue" name="password" placeholder="password">
+        <label for="floatingInputValue">Password</label>
+    </div>
+
+    <div class="text-center pt-1 mb-4 pb-1">
+      <button class="btn text-white w-100 mb-2 btn-lg" type="submit" style="border-radius: 10px;background-color: {{request.session.color}};">
+        Log In
+      </button>
+    </div>
+
+  </form>
+</div>
+</div>
+<style>
+    body{
+        /* fallback for old browsers */
+      
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(to right, #1FA2FF, #12D8FA, #A6FFCB);
+      
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(to right,#1FA2FF, #12D8FA, #A6FFCB);
+      }
+      @media only screen and (min-width : 1224px) {
+        .cal{
+            width: 450px;
+        }
+/* Styles */
+}
+</style>
+{% endblock content %}

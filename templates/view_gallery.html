@@ -1,0 +1,35 @@
+{% extends 'main.html' %}
+{% block title %}
+<title>
+    View Gallery | Gov. Secondary School Babarkot
+</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container text-center">
+    <p class="fw-bold fs-2 mt-3" style="color: {{request.session.color}};">{{category.category}}</p>
+    <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 text-dark">
+
+        <style>
+            .card {
+                border-radius: 30px;
+                height: 300px;
+
+            }
+            img{
+                object-fit: contain !important;
+            }
+        </style>
+        {% for img in images %}
+        <div class="col">
+
+            <img src="{{ img.image.url }}" class="img-fluid border border-white border-5 shadow" width="900" style="border-radius:50px;">
+
+            <div class="text-sm">
+                <p class="fs-5 fw-bold mt-2" style="position: relative;">{{img.desc}}</p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}

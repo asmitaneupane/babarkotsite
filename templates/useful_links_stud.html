@@ -1,0 +1,48 @@
+{% extends 'main.html' %}
+
+{% block title %}
+    <title>
+        Useful Links | Gov. Secondary School Babarkot
+    </title>
+{% endblock title %}
+
+{% block content %}
+    <div class="cal container text-center text-white">
+        <p class="fs-2 fw-bold mt-3" style="color: {{request.session.color}};">
+            વિધ્યાર્થીઓ માટે ઉપયોગી લિંક્સ
+        </p>
+
+        <div class="pe-3 pb-3 ps-3" style="border-radius: 20px;">
+            <form method="post">
+                <div class="d-flex mb-3">
+                        {% csrf_token %}
+                        <input type="text" class="form-control me-2 " name="filter" placeholder="Search Link">
+                        <button type="submit" class="btn btn-dark"><i class="fa-solid fa-filter"></i></button>
+                </div>
+            </form>
+                
+            {% for links in link %}
+
+                <div class="p-4 mb-3 shadow" style="border-radius: 20px;background-color: {{request.session.color}};" >
+                    <p class="fs-4 term fw-bold">{{links.term}}</p>
+                    <a href="{{links.link}}" class="btn btn-dark text-white w-100" style="border-radius: 15px;">Visit <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                </div>
+                
+            {% endfor %}
+                
+        </div>
+    </div>
+    <style>
+        @media only screen and (min-width : 1224px) {
+            .cal{
+                width: 50%;
+            }
+    /* Styles */
+    }
+  .term{
+      color: white;
+  }
+    </style>
+{% endblock content %}
+    
+    
