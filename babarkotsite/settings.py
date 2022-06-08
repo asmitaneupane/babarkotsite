@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-x7f-a@51*usp)f2ujh38fhy9%mpny9$4$y0$j&yg)%kak0-#_i
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['govsecbabarkot.in','www.govsecbabarkot.in']
+ALLOWED_HOSTS = ['govsecbabarkot.in','www.govsecbabarkot.in','*']
 
 INSTALLED_APPS = [
     'django.contrib.admin',
