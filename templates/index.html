@@ -37,9 +37,6 @@
   <p class="fs-6 fw-bold">{{quote.qoute}}</p>
 </div>
 <style>
-  img{
-    object-fit: contain !important;
-  }
     .card{
         border-radius:30px;
         height:300px;
@@ -47,19 +44,25 @@
     }
 
 
-.push,{
-height: 0px;
-}
-.car1,.car2,.car3{
-    height: 200px;
+
+.cov{
+    width: 300px;
+    height: 337px;
+    object-fit: cover;
 }
 </style>
 <div class="container text-white pt-4 pb-3 text-center">
   <p class="fs-2 fw-bold text-shadow-2" style="color:
     {{request.session.color}};">શાળાના મુખ્ય ત્રણ સંવિધાનો</p>
+
+<style>
+  .dom{
+    height: 300px;
+  }
+</style>
 <div class="row row-cols-1 row-cols-lg-3 gx-4 gy-5 pb-4">
   <div class="col dom">
-    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/42752083-success-goal-achievement-successful-complete-concept-transformed_l4jpPTYVU.jpeg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1652789952290');background-size: cover;background-position: center;">
+    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/42752083-success-goal-achievement-successful-complete-concept-transformed_l4jpPTYVU.jpeg?ik-sdk-version=javascript-1.4.3&updatedAt=1652789952290');background-size: cover;background-position: center;">
     </div>
     <div class="d-flex flex-column h-100 p-3 pb-3 text-dark text-shadow-1 mx-auto text-center">
         <h2 class="fs-3 lh-1 fw-bold ">
@@ -69,7 +72,7 @@ height: 0px;
   </div>
 
   <div class="col dom">
-    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/world-philosophy-day-education-concept-with-tree-of-knowledge-planting-on-opening-old-big-book-1059422276-47f095a519b64b70b61590b065d8d1bd_IAG50SU6v.webp?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1652790493362');background-size: cover;background-position: center;">
+    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/world-philosophy-day-education-concept-with-tree-of-knowledge-planting-on-opening-old-big-book-1059422276-47f095a519b64b70b61590b065d8d1bd_IAG50SU6v.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1652790493362');background-size: cover;background-position: center;">
     </div>
     <div class="d-flex flex-column h-100 p-3 pb-3 text-dark text-shadow-1 mx-auto text-center">
         <h2 class="fs-3 lh-1 fw-bold ">
@@ -79,7 +82,7 @@ height: 0px;
   </div>
 
   <div class="col dom">
-    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/2021_7_largeimg_120027060_IcKWd2XDD.jpg?ik-sdk-version=javascript-1.4.3&amp;updatedAt=1652790543936');background-size: cover;background-position: center;">
+    <div class="card card-cover h-100 text-bg-dark border border-white bg-body border-5 rounded-5 shadow" style="background-image: url('https://ik.imagekit.io/destroyer/2021_7_largeimg_120027060_IcKWd2XDD.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1652790543936');background-size: cover;background-position: center;">
     </div>
     <div class="d-flex flex-column h-100 p-3 pb-3 text-dark text-shadow-1 mx-auto text-center">
         <h2 class="fs-3 lh-1 fw-bold ">
@@ -93,8 +96,7 @@ height: 0px;
   <hr class="border border-2 border-dark">
 </div>
 <div class="container-fluid pt-2 pb-2 text-white">
-  <p class="fs-2 fw-bold mt-3 text-center" style="color:
-    {{request.session.color}};">
+  <p class="fs-2 fw-bold mt-3 text-center" style="color:{{request.session.color}};">
     શિક્ષણની શરૂઆત
   </p>
   <div class="text-center mb-3">
